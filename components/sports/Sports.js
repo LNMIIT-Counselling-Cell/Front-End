@@ -68,10 +68,11 @@ const styles = StyleSheet.create({
     container: { 
         position : 'absolute',
         width: 360,
-        height: 1700,
+        // height: 1700,
         backgroundColor: '#3E3A66',
         alignItems : 'center',
-        alignSelf : 'stretch'
+        alignSelf : 'stretch',
+        paddingBottom : 20
       },
 
       heading : {

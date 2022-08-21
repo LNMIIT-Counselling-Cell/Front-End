@@ -7,11 +7,12 @@ import Footer from '../Footer'
 
 const MediaCell = ({navigation}) => {
 
+  const content = "The Media Cell is the media body of LNMIIT who have their eyes and ears everywhere, looking to grasp the most important information; even from the most obscure events. Along with the singularly given responsibility of training anchors and hosts for all the events around the college, the Media Cell calls upon external guidance and internal sessions that train students in general communication and soft skills.\nHosting a plethora of flagship events every year has become a part and parcel of the Media Cell. With storytellers, creators, artists, speakers, they are one of the most vibrant body on the campus with the ability to really do EVERYTHING."
   
   return (
     <View style = {styles.container}>
         
-      <TopContent  name = "Media Cell"  image = {require('../../assets/clubs/mediacell.png')}/>
+      <TopContent  name = "Media Cell"  image = {require('../../assets/clubs/mediacell.png')} text = {content}/>
       <View style = {styles.CoContainer}>
         <Text style = {styles.positionHeading}>Coordinators</Text>
         <Coordinators name = "Akshat Upadhyay" PhoneNO = "+91 9876543212"/>
@@ -31,7 +32,6 @@ const styles = StyleSheet.create({
     container: { 
         position : 'absolute',
         width: 360,
-        height: '100%',
         backgroundColor: '#3E3A66',
         alignItems : 'center',
         alignSelf : 'stretch'

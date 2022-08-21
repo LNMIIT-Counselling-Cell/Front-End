@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
         width: 360,
         height: 778,
         backgroundColor: '#3E3A66', 
+        paddingBottom : 20
       },
 
       logoContainer : {

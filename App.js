@@ -9,15 +9,26 @@ import Council from './components/council';
 import Cultural from './components/Cultural.js/Cultural';
 import Tech from './components/Tech/Tech';
 import Sports from './components/sports/Sports';
-import MediaCell from './components/Clubs/MediaCell';
 import PreviousOutpass from './components/Outpass/PreviousOutpass';
 import Administration from './components/Admin/Administration';
+import Aaveg from './components/Clubs/Aaveg';
+import Capriccio from './components/Clubs/Capriccio';
+import Eminence from './components/Clubs/Eminence';
+import Fundoo from './components/Clubs/Fundoo';
+import Imagination from './components/Clubs/Imagination';
+import Insignia from './components/Clubs/Insignia';
+import LitCom from './components/Clubs/LC';
+import MediaCell from './components/Clubs/MediaCell';
+import Rendition from './components/Clubs/Rendition';
+import Sankalp from './components/Clubs/Sankalp';
+import Vignette from './components/Clubs/Vignette';
+
 
 export default function App() {
    const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown : false}} initialRouteName = "Admin">
+      <Stack.Navigator screenOptions={{headerShown : false}} initialRouteName = "Cult">
         <Stack.Screen name = "Outpass" component = {OutPass} />
         <Stack.Screen name = "Generated" component = {OutpassGenerated} />
         <Stack.Screen name='PO' component={PreviousOutpass} />
@@ -26,7 +37,17 @@ export default function App() {
         <Stack.Screen name='Cult' component={Cultural} />
         <Stack.Screen name = 'Tech' component={Tech} />
         <Stack.Screen name='Sports' component={Sports} />
+        <Stack.Screen name='Aaveg' component={Aaveg} />
+        <Stack.Screen name='Capriccio' component={Capriccio} />
+        <Stack.Screen name='Eminence' component={Eminence} />
+        <Stack.Screen name='Fundoo' component={Fundoo} />
+        <Stack.Screen name='Imagi' component={Imagination} />
+        <Stack.Screen name='Insignia' component={Insignia} />
+        <Stack.Screen name='LC' component={LitCom} />
         <Stack.Screen name='MC' component={MediaCell} />
+        <Stack.Screen name='Rendition' component={Rendition} />
+        <Stack.Screen name='Sankalp' component={Sankalp} />
+        <Stack.Screen name='Vignette' component={Vignette} />
         <Stack.Screen name='Admin' component= {Administration} />
 
         

@@ -20,22 +20,25 @@ const Tech = ({navigation}) => {
         </View>
         <View style = {styles.cardBox}>
           <TouchableOpacity onPress={() => navigation.navigate('MC')} >
-            <Card name = 'Astronomy' tag = 'Club' image = {require('../../assets/tech/astro.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
+            <Card name = 'Astronomy' tag = 'Club' image = {require('../../assets/Logos/astro.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('')} >
-            <Card name = 'Cybros' tag = '' image = {require('../../assets/tech/cybros.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
+            <Card name = 'Cybros' tag = '' image = {require('../../assets/Logos/cybros.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
             </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('')} >
-            <Card name = 'Debsoc' tag = '' image = {require('../../assets/tech/debsoc.png')} backgroundColor = "#A6E6FF" color = "#00B7FE"/>
+            <Card name = 'Debsoc' tag = '' image = {require('../../assets/Logos/debsoc.png')} backgroundColor = "#A6E6FF" color = "#00B7FE"/>
             </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('')} >
-            <Card name = 'Phoenix' tag = '' image = {require('../../assets/tech/ecell.png')} backgroundColor = "#FEB2C3" color = "#FD2254"/>
+            <Card name = 'Phoenix' tag = '' image = {require('../../assets/Logos/e-cell.png')} backgroundColor = "#FEB2C3" color = "#FD2254"/>
             </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('')} >
-            <Card name = 'E-Cell' tag = '' image = {require('../../assets/tech/phoenix.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
+            <Card name = 'E-Cell' tag = '' image = {require('../../assets/Logos/pheonix.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
             </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('')} >
-            <Card name = 'Quizzinga' tag = '' image = {require('../../assets/tech/quiz.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
+            <Card name = 'Quizzinga' tag = '' image = {require('../../assets/Logos/quizzinga.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
+            </TouchableOpacity>     
+          <TouchableOpacity onPress={() => navigation.navigate('')} >
+            <Card name = 'Cipher' tag = '' image = {require('../../assets/Logos/cipher.png')} backgroundColor = "#A6E6FF" color = "#00B7FE"/>
             </TouchableOpacity>     
         </View>
     </View>
@@ -50,10 +53,11 @@ const styles = StyleSheet.create({
     container: { 
         position : 'absolute',
         width: 360,
-        height: 1100,
+        // height: 1100,
         backgroundColor: '#3E3A66',
         alignItems : 'center',
-        alignSelf : 'stretch'
+        alignSelf : 'stretch',
+        paddingBottom : 20
       },
 
       heading : {

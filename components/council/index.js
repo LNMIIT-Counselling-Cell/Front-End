@@ -14,7 +14,8 @@ const Council = () => {
         </Text>
       </View>
         <NameTags name = "Poojan Gadhiya" position = "President"/>
-        <NameTags name = "Om Abash Jha" position = "Vice-President"/>
+        <NameTags name = "Om Abhash Jha" position = "Vice-President"/>
+        <NameTags name = "Tanay Khandelwal" position = "Finance Convener"/>
         <View style = {styles.Event}>
             <Text style = {styles.eventText}>Presidential Council</Text>
         </View>
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     container: { 
         position : 'absolute',
         width: 360,
-        height: 850,
+        // height: 850,
         backgroundColor: '#3E3A66',
         alignItems : 'center',
         alignSelf : 'stretch'
@@ -97,7 +98,8 @@ const styles = StyleSheet.create({
         flexWrap : 'wrap',
         flexShrink : 1,
         flexBasis : 'auto',
-        flexGrow : 0
+        flexGrow : 0,
+        marginBottom : 20
         
       }
 

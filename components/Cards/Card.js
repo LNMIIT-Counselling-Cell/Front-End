@@ -7,7 +7,7 @@ const Card = (props) => {
   return (
     <View style = {[styles.card, {backgroundColor : backgroundColor}]}>
       <View style = {styles.LogoCOntainer}>
-        <Image source={image} style = {[styles.logo]}></Image>
+        <Image source={image} style = {[styles.logo,styles.shadowProp]}></Image>
       </View>
       <Text style = {[styles.name, {color : color}]}> {name} {'\n'} {tag}</Text>
       
@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
     },
 
     logo : {
-        width : 64,
-        height : 64,
+        width : 100,
+        height : 100,
     },
 
     name : {
@@ -48,5 +48,11 @@ const styles = StyleSheet.create({
         lineHeight : 14,
         fontWeight : 500,
         textAlign : 'center'
-    }
+    },
+    shadowProp: {  
+      shadowOffset: {width: -2, height: 4},  
+      shadowColor: '#171717',  
+      shadowOpacity: 0.2,  
+      shadowRadius: 3,  
+    },  
 })

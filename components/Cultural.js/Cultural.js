@@ -21,38 +21,38 @@ const Cultural = ({navigation}) => {
         </TouchableOpacity>
         
         <View style = {styles.cardBox}>
-          <TouchableOpacity>
-            <Card name = 'Aaveg' tag = 'The Nukkad Mandali' image = {require('../../assets/clubs/aaveg.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
+          <TouchableOpacity onPress={() => navigation.navigate('Aaveg')}>
+            <Card name = 'Aaveg' tag = 'The Nukkad Mandali' image = {require('../../assets/Logos/aaveg.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
           </TouchableOpacity>    
-          <TouchableOpacity>
-            <Card name = 'Capriccio' tag = 'The Music Club' image = {require('../../assets/clubs/capriccio.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
+          <TouchableOpacity onPress={() => navigation.navigate('Capriccio')}>
+            <Card name = 'Capriccio' tag = 'The Music Club' image = {require('../../assets/Logos/capriccio.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
           </TouchableOpacity>    
-          <TouchableOpacity>
-            <Card name = 'Eminence' tag = 'The Fashion Club' image = {require('../../assets/clubs/eminence.png')} backgroundColor = "#A6E6FF" color = "#00B7FE"/>
+          <TouchableOpacity onPress={() => navigation.navigate('Eminence')}>
+            <Card name = 'Eminence' tag = 'The Fashion Club' image = {require('../../assets/Logos/eminence.png')} backgroundColor = "#A6E6FF" color = "#00B7FE"/>
           </TouchableOpacity>    
-          <TouchableOpacity>
-            <Card name = 'Fundoo' tag = 'Club' image = {require('../../assets/clubs/aaveg.png')} backgroundColor = "#FEB2C3" color = "#FD2254"/>
+          <TouchableOpacity onPress={() => navigation.navigate('Fundoo')}>
+            <Card name = 'Fundoo' tag = 'Club' image = {require('../../assets/Logos/fundoo.png')} backgroundColor = "#FEB2C3" color = "#FD2254"/>
           </TouchableOpacity>    
-          <TouchableOpacity>
-            <Card name = 'Imagination' tag = '' image = {require('../../assets/clubs/imagination.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
+          <TouchableOpacity onPress={() => navigation.navigate('Imagi')}>
+            <Card name = 'Imagination' tag = '' image = {require('../../assets/Logos/imagination.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
           </TouchableOpacity>    
-          <TouchableOpacity>
-            <Card name = 'Insignia' tag = 'The Dance Club' image = {require('../../assets/clubs/insignia.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
+          <TouchableOpacity onPress={() => navigation.navigate('Insignia')}>
+            <Card name = 'Insignia' tag = 'The Dance Club' image = {require('../../assets/Logos/insignia.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
           </TouchableOpacity>    
-          <TouchableOpacity>
-            <Card name = 'Literary' tag = 'Committe' image = {require('../../assets/clubs/LC.png')} backgroundColor = "#A6E6FF" color = "#00B7FE"/>
+          <TouchableOpacity onPress={() => navigation.navigate('LC')}>
+            <Card name = 'Literary' tag = 'Committe' image = {require('../../assets/Logos/LC.png')} backgroundColor = "#A6E6FF" color = "#00B7FE"/>
           </TouchableOpacity>    
           <TouchableOpacity onPress={() => navigation.navigate('MC')}>
-            <Card name = 'Media Cell' tag = '' image = {require('../../assets/clubs/mediacell.png')} backgroundColor = "#FEB2C3" color = "#FD2254"/>
+            <Card name = 'Media Cell' tag = '' image = {require('../../assets/Logos/media cell.png')} backgroundColor = "#FEB2C3" color = "#FD2254"/>
           </TouchableOpacity>    
-          <TouchableOpacity>
-            <Card name = 'Rendition' tag = 'The Dramatics Club' image = {require('../../assets/clubs/rendition.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
+          <TouchableOpacity onPress={() => navigation.navigate('Rendition')}>
+            <Card name = 'Rendition' tag = 'The Dramatics Club' image = {require('../../assets/Logos/rendition.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
           </TouchableOpacity>    
-          <TouchableOpacity>
-            <Card name = 'Sankalp' tag = 'Club' image = {require('../../assets/clubs/sankalp.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
+          <TouchableOpacity onPress={() => navigation.navigate('Sankalp')}>
+            <Card name = 'Sankalp' tag = 'Club' image = {require('../../assets/Logos/sankalp.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
           </TouchableOpacity>    
-          <TouchableOpacity>
-            <Card name = 'Vignette' tag = 'The art club' image = {require('../../assets/clubs/vignette.png')} backgroundColor = "#A6E6FF" color = "#00B7FE"/>
+          <TouchableOpacity onPress={() => navigation.navigate('Vignette')}>
+            <Card name = 'Vignette' tag = 'The art club' image = {require('../../assets/Logos/vignette.png')} backgroundColor = "#A6E6FF" color = "#00B7FE"/>
           </TouchableOpacity>    
             
             
@@ -70,10 +70,10 @@ const styles = StyleSheet.create({
     container: { 
         position : 'absolute',
         width: 360,
-        height: 1700,
+        // height: 1700,
         backgroundColor: '#3E3A66',
         alignItems : 'center',
-        alignSelf : 'stretch'
+        // alignSelf : 'stretch'
       },
 
       heading : {
@@ -130,7 +130,8 @@ const styles = StyleSheet.create({
         flexWrap : 'wrap',
         flexShrink : 1,
         flexBasis : 'auto',
-        flexGrow : 0
+        flexGrow : 0,
+        marginBottom : 20
         
       }
 
