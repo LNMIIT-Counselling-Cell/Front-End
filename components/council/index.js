@@ -1,9 +1,10 @@
-import {Dimensions ,Image,StyleSheet,View, Text } from 'react-native'
+import {Dimensions ,Image,StyleSheet,View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import NameTags from '../NameTags/NameTags'
 import Card from '../Cards/Card'
+// import { TouchableOpacity } from 'react-native-web'
 
-const Council = () => {
+const Council = ({navigation}) => {
   return (
     <View style = {styles.container}>
       <Text style = {styles.heading}>Student's Gymkhana</Text>
@@ -20,10 +21,15 @@ const Council = () => {
             <Text style = {styles.eventText}>Presidential Council</Text>
         </View>
         <View style = {styles.cardBox}>
-            <Card name = 'Cultural' tag = 'Council' image = {require('../../assets/cultural council.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
-            <Card name = 'Science & Technology' tag = 'Council' image = {require('../../assets/plinth logo.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
-            <Card name = 'Sports' tag = 'Council' image = {require('../../assets/despo logo.png')} backgroundColor = "#A6E6FF" color = "#00B7FE"/>
-            
+            <TouchableOpacity onPress={()=>navigation.navigate('Cult')}>
+              <Card name = 'Cultural' tag = 'Council' image = {require('../../assets/cultural council.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate('Tech')}>
+              <Card name = 'Science & Technology' tag = 'Council' image = {require('../../assets/plinth logo.png')} backgroundColor = "#C3B0FF" color = "#551FFF"/>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate('Sports')}>
+              <Card name = 'Sports' tag = 'Council' image = {require('../../assets/despo logo.png')} backgroundColor = "#A6E6FF" color = "#00B7FE"/>
+            </TouchableOpacity>
             
         </View>
     </View>

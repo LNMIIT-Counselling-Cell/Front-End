@@ -7,6 +7,7 @@ import Card from '../Cards/Card'
 const Cultural = ({navigation}) => {
   return (
     <View style = {styles.container}>
+      <Image style = {styles.back} source = {require('../../assets/back.png')} onClick ={()=>navigation.goBack()}></Image>
       <Text style = {styles.heading}>Cultural Council</Text>
       <Image source={require('../../assets/cultural council.png')} style = {styles.logo} ></Image>
       <View style = {styles.textContainer}>
@@ -16,7 +17,7 @@ const Cultural = ({navigation}) => {
       </View>
         <NameTags name = "Sarthak Goyal" position = "General Secretary"/>
         <NameTags name = "Diya Rajwanshi" position = "Associate General Secretary"/>
-        <TouchableOpacity style = {styles.Event}>
+        <TouchableOpacity style = {styles.Event} onPress = {() => navigation.navigate('Viva')}>
             <Text style = {styles.eventText}> Vivacity</Text>
         </TouchableOpacity>
         
@@ -133,6 +134,16 @@ const styles = StyleSheet.create({
         flexGrow : 0,
         marginBottom : 20
         
-      }
+      },
+
+      back : {
+        position : 'absolute',
+        top : 20,
+        left : 20,
+        width : 25,
+        height : 25,
+        alignItems : 'center',
+        resizeMode : 'contain'
+      } 
 
 })

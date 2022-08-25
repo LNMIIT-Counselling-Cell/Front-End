@@ -6,6 +6,7 @@ import Card from '../Cards/Card'
 const Sports = ({navigation}) => {
   return (
     <View style = {styles.container}>
+      <Image style = {styles.back} source = {require('../../assets/back.png')} onClick ={()=>navigation.goBack()}></Image>
       <Text style = {styles.heading}>Sports Council</Text>
       <Image source={require('../../assets/despo logo.png')} style = {styles.logo} ></Image>
       <View style = {styles.textContainer}>
@@ -15,9 +16,9 @@ const Sports = ({navigation}) => {
       </View>
         <NameTags name = "Pratik Aswani" position = "General Secretary"/>
         <NameTags name = "Tanya Agarwal" position = "Associate General Secretary"/>
-        <View style = {styles.Event}>
-            <Text style = {styles.eventText}>Despotivos</Text>
-        </View>
+        <TouchableOpacity style = {styles.Event} onPress = {() => navigation.navigate('Despo')}>
+            <Text style = {styles.eventText}> Despotivos</Text>
+        </TouchableOpacity>
         <View style = {styles.cardBox}>
           <TouchableOpacity onPress={() => {navigation.navigate('')}}>
             <Card name = 'Badminton' tag = '' image = {require('../../assets/sports/badminton.png')} backgroundColor = "#FFCBA6" color = "#FF6A00"/>
@@ -131,6 +132,16 @@ const styles = StyleSheet.create({
         flexBasis : 'auto',
         flexGrow : 0
         
+      },
+
+      back : {
+        position : 'absolute',
+        top : 20,
+        left : 20,
+        width : 25,
+        height : 25,
+        alignItems : 'center',
+        resizeMode : 'contain'
       }
 
 })

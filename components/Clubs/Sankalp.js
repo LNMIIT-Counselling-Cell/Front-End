@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View ,Image} from 'react-native'
 import React from 'react'
 import TopContent from '../PageComponents/TopContent'
 import Gallery from '../PageComponents/Gallery'
@@ -10,7 +10,7 @@ const Sankalp = ({navigation}) => {
   const content = "Sankalp, The Social club of LNMIIT Jaipur, laid its foundation on the stiff rocks of helping and giving our valuables and necessities despite being a person who expects to get something in return. Here we work on social causes associated with the college mess workers, problems faced by people in the village near campus, and organizing self-growth and learning sessions for club dignitaries. Events such as 'Sahyog' , 'Make A Meal' and 'Janmashtami Celebration' are some campus events celebrated and organized with full enthusiasm and excitement. At last, be a person with a strong will for contribution."
   return (
     <View style = {styles.container}>
-        
+        <Image style = {styles.back} source = {require('../../assets/back.png')} onClick ={()=>navigation.goBack()}></Image>
       <TopContent  name = "Sankalp"  image = {require('../../assets/Logos/sankalp.png')} text = {content}/>
       <View style = {styles.CoContainer}>
         <Text style = {styles.positionHeading}>Coordinators</Text>
@@ -54,6 +54,16 @@ const styles = StyleSheet.create({
         lineHeight : 18,
         fontWeight : 700,
         marginBottom : 13
+    },
+
+    back : {
+      position : 'absolute',
+      top : 20,
+      left : 20,
+      width : 25,
+      height : 25,
+      alignItems : 'center',
+      resizeMode : 'contain'
     }
     
 })

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,Image } from 'react-native'
 import React from 'react'
 import TopContent from '../PageComponents/TopContent'
 import Gallery from '../PageComponents/Gallery'
@@ -12,7 +12,7 @@ const Capriccio = ({navigation}) => {
   
   return (
     <View style = {styles.container}>
-        
+        <Image style = {styles.back} source = {require('../../assets/back.png')} onClick ={()=>navigation.goBack()}></Image>
       <TopContent  name = "Capriccio"  image = {require('../../assets/Logos/capriccio.png')} text = {content}/>
       <View style = {styles.CoContainer}>
         <Text style = {styles.positionHeading}>Coordinators</Text>
@@ -57,6 +57,16 @@ const styles = StyleSheet.create({
         lineHeight : 18,
         fontWeight : 700,
         marginBottom : 13
+    },
+
+    back : {
+      position : 'absolute',
+      top : 20,
+      left : 20,
+      width : 25,
+      height : 25,
+      alignItems : 'center',
+      resizeMode : 'contain'
     }
     
 })

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,Image } from 'react-native'
 import React from 'react'
 import TopContent from '../PageComponents/TopContent'
 import Gallery from '../PageComponents/Gallery'
@@ -11,7 +11,7 @@ const MediaCell = ({navigation}) => {
   
   return (
     <View style = {styles.container}>
-        
+        <Image style = {styles.back} source = {require('../../assets/back.png')} onClick ={()=>navigation.goBack()}></Image>
       <TopContent  name = "Media Cell"  image = {require('../../assets/clubs/mediacell.png')} text = {content}/>
       <View style = {styles.CoContainer}>
         <Text style = {styles.positionHeading}>Coordinators</Text>
@@ -20,7 +20,12 @@ const MediaCell = ({navigation}) => {
         <Coordinators name = "Anuj Mantri" PhoneNO = "+91 9876543212"/>
         <Coordinators name = "Himanshi Rangnani" PhoneNO = "+91 9876543212"/>
       </View>
-      <Gallery />
+      <Gallery 
+        g1 = {require('../../assets/Cult Clubs/Media Cell/1.jpeg')}
+        g2 = {require('../../assets/Cult Clubs/Media Cell/2.jpg')}
+        g3 = {require('../../assets/Cult Clubs/Media Cell/3.jpg')}
+        g4 = {require('../../assets/Cult Clubs/Media Cell/4.jpg')}
+      />
       {/* <Footer name = {navigation.navigate('Gym')}/> */}
     </View>
   )
@@ -51,6 +56,16 @@ const styles = StyleSheet.create({
         lineHeight : 18,
         fontWeight : 700,
         marginBottom : 13
+    },
+
+    back : {
+      position : 'absolute',
+      top : 20,
+      left : 20,
+      width : 25,
+      height : 25,
+      alignItems : 'center',
+      resizeMode : 'contain'
     }
     
 })

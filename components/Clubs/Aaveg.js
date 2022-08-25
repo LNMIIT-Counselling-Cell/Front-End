@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Image,StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import TopContent from '../PageComponents/TopContent'
 import Gallery from '../PageComponents/Gallery'
@@ -10,8 +10,8 @@ const Aaveg = ({navigation}) => {
 
   return (
     <View style = {styles.container}>
-        
-      <TopContent  name = "Media Cell"  image = {require('../../assets/Logos/aaveg.png')} text = {content}/>
+      <Image style = {styles.back} source = {require('../../assets/back.png')} onClick ={()=>navigation.goBack()}></Image>  
+      <TopContent  name = "Aaveg"  image = {require('../../assets/Logos/aaveg.png')} text = {content}/>
       <View style = {styles.CoContainer}>
         <Text style = {styles.positionHeading}>Coordinators</Text>
         <Coordinators name = "Chintan S Makhijani" PhoneNO = "+91 8866941609"/>
@@ -55,6 +55,16 @@ const styles = StyleSheet.create({
         lineHeight : 18,
         fontWeight : 700,
         marginBottom : 13
+    },
+
+    back : {
+      position : 'absolute',
+      top : 20,
+      left : 20,
+      width : 25,
+      height : 25,
+      alignItems : 'center',
+      resizeMode : 'contain'
     }
     
 })

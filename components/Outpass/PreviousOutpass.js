@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Image,StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { TextInput } from 'react-native-web'
 
-const PreviousOutpass = () => {
+const PreviousOutpass = ({navigation}) => {
   return (
     <View style = {styles.container}>
+      <Image style = {styles.back} source = {require('../../assets/back.png')} onClick ={()=>navigation.goBack()}></Image>
       <View style = {styles.heading}>
         <Text style = {styles.headText}>Outpass</Text>
       </View>
@@ -99,6 +100,16 @@ const styles = StyleSheet.create({
       OutContainer : {
         width : 288,
         top : 136
+      },
+
+      back : {
+        position : 'absolute',
+        top : 20,
+        left : 20,
+        width : 25,
+        height : 25,
+        alignItems : 'center',
+        resizeMode : 'contain'
       }
     
 })

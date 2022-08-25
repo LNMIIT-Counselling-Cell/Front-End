@@ -1,8 +1,8 @@
-import { Image,StyleSheet,View, Text } from 'react-native'
+import { TouchableOpacity,Image,StyleSheet,View, Text } from 'react-native'
 import React from 'react'
 
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style = {styles.container}>
         <View style = {styles.header}>
@@ -10,22 +10,22 @@ const Home = () => {
             <Text style = {styles.heading}>C-Cell</Text>
         </View>
         <View style = {styles.optionHolder}>
-            <View style = {styles.option}>
+            <TouchableOpacity onPress={() => navigation.navigate('')} style = {styles.option}>
                 <Image style = {styles.optionImage} source={require('../assets/todays events logo.png')}></Image>
                 <Text style = {styles.optionText}>Today's Events</Text>
-            </View>
-            <View style = {[styles.option , {backgroundColor : '#C3B0FF'}]}>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Menu')} style = {[styles.option , {backgroundColor : '#C3B0FF'}]}>
                 <Image style = {[styles.optionImage, {width : 26,height:38.55}]} source={require('../assets/menu logo.png')}></Image>
                 <Text style = {[styles.optionText, {color : '#551FFF'}]}>Menu</Text>
-            </View>
-            <View style = {[styles.option , {backgroundColor : '#A6E6FF'}]}>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('')} style = {[styles.option , {backgroundColor : '#A6E6FF'}]}>
                 <Image style = {styles.optionImage} source={require('../assets/cp logo.png')}></Image>
                 <Text style = {[styles.optionText, {color : '#00B7FE'}]}>Counselling Process</Text>
-            </View>
-            <View style = {[styles.option , {backgroundColor : '#FEB2C3'}]}>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('TT')} style = {[styles.option , {backgroundColor : '#FEB2C3'}]}>
                 <Image style = {styles.optionImage} source={require('../assets/timetable logo.png')}></Image>
                 <Text style = {[styles.optionText, {color : '#FD2254'}]}>Time Table</Text>
-            </View>
+            </TouchableOpacity>
         </View>   
     </View>
   )
