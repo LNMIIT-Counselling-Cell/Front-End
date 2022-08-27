@@ -36,12 +36,13 @@ import AboutUs from './components/AboutUs/AboutUs';
 import Facullty from './components/Faculty/Facullty';
 import Menu from './components/Menu/Menu';
 import TimeTable from './components/TimeTable/TimeTable';
+import Login from './components/Login/Login';
 
 export default function App() {
    const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown : false}} initialRouteName = "Outpass">
+      <Stack.Navigator screenOptions={{headerShown : false}} initialRouteName = "Login">
         <Stack.Screen name = "Outpass" component = {OutPass} />
         <Stack.Screen name = "Generated" component = {OutpassGenerated} />
         <Stack.Screen name='PO' component={PreviousOutpass} />
@@ -76,6 +77,7 @@ export default function App() {
         <Stack.Screen name='Faculty' component= {Facullty} />
         <Stack.Screen name='Menu' component= {Menu} />
         <Stack.Screen name='TT' component= {TimeTable} />
+        <Stack.Screen name='Login' component= {Login} />
 
 
       </Stack.Navigator>
